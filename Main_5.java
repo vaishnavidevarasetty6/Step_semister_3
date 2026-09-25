@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import java.util.*;
 
 public class Main_5 {
@@ -47,5 +48,36 @@ public class Main_5 {
         String feedback = sc.nextLine();
 
         printFilteredWordFrequency(feedback);
+=======
+class Main_5 {
+    static void classifyWordLengths(String review) {
+        String[] words = review.split(" ");
+
+        int shortWords = 0;
+        int mediumWords = 0;
+        int longWords = 0;
+
+        for (int i = 0; i < words.length; i++) {
+            int length = words[i].length();
+
+            if (length >= 1 && length <= 4) {
+                shortWords++;
+            } else if (length >= 5 && length <= 8) {
+                mediumWords++;
+            } else {
+                longWords++;
+            }
+        }
+
+        System.out.println("Short: " + shortWords);
+        System.out.println("Medium: " + mediumWords);
+        System.out.println("Long: " + longWords);
+    }
+
+    public static void main(String[] args) {
+        classifyWordLengths(
+            "This movie was absolutely fantastic and thrilling"
+        );
+>>>>>>> 661311d2691674cde9eca06f9c05378742dda76e
     }
 }
